@@ -35,7 +35,7 @@ class TemplateSkill(MycroftSkill):
     #   'Greetings planet earth'
     @intent_handler(IntentBuilder("").require("Play").require("Game"))
     def handle_hello_world_intent(self, message):
-        self.enclosure.bus.emit(Message("metadata", {"type": "samegame"}))
+        self.enclosure.bus.emit(Message("metadata", {"type": "skill-samegame"}))
 
 
 
